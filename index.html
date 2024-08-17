@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body id="Home">
     <nav class="navbar navbar-expand-lg bg-body-tertiary ">
@@ -21,35 +22,37 @@
                          Nhan<span>cio</span></h1>
                         </a>
             </div>
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button> -->
+            
+            <button class="navbar-toggler menu-button" >
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <svg  onclick=showSidebar() xmlns="http://www.w3.org/2000/svg" height="25px" fill="#000" viewBox="0 -960 960 960" width="25px"  fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                
+                <ul class="sidebar">
+                  <li onclick=hideSidebar() ><a ><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px"  fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#Home" onclick=hideside() >Home</a>
+                    </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Services" onclick=hideside()>Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Projects" onclick=hideside()>Our work </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#About" onclick=hideside() >About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Contact" onclick=hideside() >Contact Us</a>
+                </li>
+                <div>
+                  <a href="https://learning.nhancio.com/"  target="_blank" id="learn">University</a>
+                </div>
+            
+              </ul>
+              </button>
 
          <div class="collapse navbar-collapse" id="navbarNav">
-
-            <ul class="sidebar">
-                <li onclick=hideSidebar() ><a ><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px"  fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#Home" onclick=hideside() >Home</a>
-                  </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Services" onclick=hideside()>Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Projects" onclick=hideside()>Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#About" onclick=hideside() >About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Contact" onclick=hideside() >Contact Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://learning.nhancio.com/" target="_blank" onclick=hideside() >Learn More</a>
-                </li>
-            </ul>
-           
-            <ul class="navbar-nav ">
+              <ul class="navbar-nav ">
                <li class="nav-item" class="hideOnMobile">
                     <a class="nav-link active" aria-current="page" href="#Home">Home</a>
                   </li>
@@ -57,7 +60,7 @@
                 <a class="nav-link" href="#Services">Services</a>
               </li>
               <li class="nav-item"  class="hideOnMobile">
-                <a class="nav-link" href="#Projects">Projects</a>
+                <a class="nav-link" href="#Projects">Our work</a>
               </li>
               <li class="nav-item"  class="hideOnMobile">
                 <a class="nav-link" href="#About">About Us</a>
@@ -65,43 +68,46 @@
               <li class="nav-item"  class="hideOnMobile">
                 <a class="nav-link" href="#Contact">Contact Us</a>
               </li>
-              <li class="nav-item"  class="hideOnMobile" >
-                <a class="nav-link" href="https://learning.nhancio.com/" target="_blank">Learn More</a>
-              </li>
-              <li  class="nav-item menu-button" onclick=showSidebar() ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="25px" fill="#000" viewBox="0 -960 960 960" width="25px"  fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+              <a href="https://learning.nhancio.com/"  target="_blank" class="hideOnMobile" id="Learn">University</a>
+              
+              
+          
+              <!-- <li  class="nav-item menu-button" class="navbar-toggler" onclick=showSidebar() >
+                <a class="nav-link"  href="#"><svg xmlns="http://www.w3.org/2000/svg" height="25px" fill="#000" viewBox="0 -960 960 960" width="25px"  fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li> -->
             </ul>
           </div>
         </div>
       </nav>
       <script>
-                  document.querySelectorAll('nav ul li a').forEach(anchor => {
-              anchor.addEventListener('click', function(e) {
-                  // Prevent the default action
-                  e.preventDefault();
+                            document.querySelectorAll('nav ul li a').forEach(anchor => {
+                        anchor.addEventListener('click', function(e) {
+                            // Prevent the default action
+                            e.preventDefault();
 
-                  // Get the target section from the href attribute
-                  const targetId = this.getAttribute('href').substring(1);
+                            // Get the target section from the href attribute
+                            const targetId = this.getAttribute('href').substring(1);
 
-                  // Scroll to the target section
-                  document.getElementById(targetId).scrollIntoView({
-                      behavior:"smooth"
-                  });
-              });
-          });
-        function showSidebar(){
-        const sidebar=document.querySelector('.sidebar');
-        sidebar.style.display ='flex';
-        sidebar.classList.remove('hide');
-       
-    }
-        function hideSidebar(){
-        const sidebar=document.querySelector('.sidebar');
-        sidebar.style.display ='none';
-    }
-    function hideside(){
-        const sidebar= document.querySelector('.sidebar');
-        sidebar.classList.add('hide');
-    }
+                            // Scroll to the target section
+                            document.getElementById(targetId).scrollIntoView({
+                                behavior:"smooth"
+                            });
+                        });
+                    });
+                    function showSidebar(){
+                    const sidebar=document.querySelector('.sidebar');
+                    sidebar.style.display ='flex';
+                    sidebar.classList.remove('hide');
+                    // sidebar.classList.add('show');
+                  
+                }
+                    function hideSidebar(){
+                    const sidebar=document.querySelector('.sidebar');
+                    sidebar.style.display ='none';
+                }
+                function hideside(){
+                    const sidebar= document.querySelector('.sidebar');
+                    sidebar.classList.add('hide');
+                }
     
     </script>
       <div class="mainpage">
@@ -112,7 +118,10 @@
             </div>
          
             <div class="p">
-                <p>your innovative partner in digital transformation and startup growth. We specialize in creating cutting-edge solutions tailored to accelerate your business. From strategic planning to execution, Nhancio is dedicated to helping you succeed in the digital arena.
+                <p>
+                  <h5>your innovative partner in digital transformation and startup growth. </h5>
+                   <h5>We specialize in creating cutting-edge solutions tailored to accelerate your business.</h5>
+                    <h5>From strategic planning to execution, Nhancio is dedicated to helping you succeed in the digital arena.</h5>
                 </p>
             </div>
           
@@ -229,7 +238,7 @@
             <div class="project-item">
               Discover our portfolio of successful projects where we've partnered
               with startups and established companies to drive growth and
-              innovation. [Explore Projects]
+              innovation.
             </div>
           </div>
         </div>
@@ -262,7 +271,97 @@
         </div>
       </section>
 
+      <section class="abouts-section" id="About">
+        <div class="contanier">
+          <div class="abouts-header">
+            <button class="abouts-button">About Us</button>
+            <h1> Learn more about Nhancio</h1>
+          </div>
+          <div class="abouts-list">
+            <div class="about-item">
+              Our mission, Our team, and Our journey in empowering businesses through technology
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <footer class="footer-section"></footer>
+      
+      <section class="contacts-section" id="Contact">
+        <div class="contanier">
+          <div class="contacts-header">
+            <button class="contacts-button">Contact Us</button>
+            <h1>Get in Touch with Nhancio</h1>
+          </div>
+          <div class="contacts-list">
+            <div class="contact-item">
+            <ul>
+              <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=nhanciolearning@gmail.com" target="_blank" class="hover-link footer-link">
+                <span><i class="fa-solid fa-envelope"></i></span>
+                Email:nhanciolearning@gmail.com
+              </a></li>
+              <li>
+                <a href="tel:8247816401" target="_blank" class="hover-link footer-link">
+                  <span><i class="fa-solid fa-phone-volume"></i></span>
+                  Phone:+91 8247816401
+                </a>
+              </li>
+              <li><a href=""><span><i class="fa-solid fa-location-dot"></i></span> Nhancio, Hyderabad</a></li>
+            </ul>
+          </div>
+        </div>
+          <div class=" call-action">
+            <h6>Have a question or need a customized solution? Fill out the form, and our team will get back to you shortly.
+            </h6>
+          </div>
+        </div>
+      </section>
+      <section class="footer">
+        <footer class="footer-section">
+          <div class="quick-links flex flex-wrap">
+            <h4 class="w-100">Quick Links</h4>
+            <ul class="w-50">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#Home" onclick=hideside() >Home</a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Services" >Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Projects" >Our work </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#About"  >About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Contact">Contact Us</a>
+          </li>
+          <li>
+            <a href="https://learning.nhancio.com/"  target="_blank">University</a>
+          </li>
+      
+        </ul>
+           
+        </div>
+
+        <div class="link-column">
+          <h4 style="color: #ffffff;">Follow Us</h4>
+          <a href="https://www.linkedin.com/company/nhancio/" target="_blank" class="hover-link footer-link">Linkedin <span><i class="fa-brands  fa-linkedin"></i></span></a>
+          <!-- <a href="/" target="_blank" class="hover-link footer-link">Facebook <span><i class="fa-brands fa-facebook"></i></span></a> -->
+          <a href="https://www.instagram.com/nhancio/"  target="_blank" class="hover-link footer-link">Instagram <span><i class="fa-brands fa-instagram"></i></span></a>
+          <!-- <a href="/" target="_blank" class="hover-link footer-link">Twitter <span><i class="fa-brands fa-twitter"></i></span></a> -->
+          <!-- <a href="/" target="_blank" class="hover-link footer-link">Telegram <span><i class="fa-brands fa-telegram"></i></span></a> -->
+      </div>
+      <div class="legal">
+         <b class="b">Privacy Policy | Terms of Service | © Nhancio 2024 </b> 
+      </div>
+      <div class="Newsletter">
+        Stay updated with the latest news and insights from Nhancio. Subscribe to our newsletter.
+      </div>
+        
+        </footer>
+      </section>
+    
+
+   
 </body>
 </html>
