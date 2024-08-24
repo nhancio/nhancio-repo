@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+
 * {
   margin: 0;
   padding: 0;
@@ -7,135 +10,347 @@ body {
   color: #508c9b;
   font-family: Arial, sans-serif;
 }
-/* Navbar-section */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
 
-.navbar-brand { font-size: 2rem; color: #40a2d8; }
-.brand-cio { color: #00b3b3; }
-.nav-link { color: #000; margin-right: 35px; }
-/* .nav-link:hover { color: #fff; background-color: #4cc1ec; display: flex; justify-content: center; text-align: center;} */
-.nav-item{color: #000;}
-/* .nav-item:hover{ color: #fff; background-color: #4cc1ec;} */
-.navbar-toggler:hover { color: #00b3b3; border: none; }
+/* navbar  */
 
-.navbar ul li a {
-  /* margin-left: 0px; */
-  /* margin-left: 1rem; */
-  font-size: 18px;
-  height: 50px;
-  width: 120px;
-  color: #212121;
-  font-weight: 400;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.collapse {
-  font-size: large;
-  display: flex;
+/* Initial Navbar Styling */
+/* Navbar Styling */
 
 
-}
-.collapse a:hover {
-  color: #fff;
-  fill:#eff9f8;
-  height: 50px;
-  width: 120px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  background-color: #4cc1ec;
-  border: 2px solid #4cc1ec;
-}
-#learn{
-  background-color: #4cc1ec;
-  text-decoration: none;
-  color: #eff9f8;
-  height:50px;
-  width: 120px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  border-radius: 5px;
-  font-weight: 400;
-}
-
-#learn:hover{
-  background-color: #40a2d8;
-}
-/* #navbarNav .university a{ text-decoration: none; color: white; }
-#navbarNav .university{  background-color: #4cc1ec; border-radius: 10px; } */
-
-/* Sidebar styles */
-.sidebar {
-position: fixed;
-top: 0;
-right: -250px; /* Start off-screen to the right */
-width: 250px;
-height: 100%;
-background-color: #f8f9fa;
-box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Shadow on the left side */
-z-index: 1000;
-transition: right 0.3s ease; /* Animate the right property */
-}
-
-.sidebar-content {
-padding: 20px;
-}
-
-.sidebar .navbar-nav {
-flex-direction: column;
-}
-.sidebar ul li a{
-  color: #000;
-  display: flex;
-  height: 50px;
-  width: 120px;
-  justify-content: center;
-  text-align:center;
-  align-items: center;
-}
-.sidebar ul li a:hover{
-  background-color: #4cc1ec;
-  color: #eff9f8;
-  height: 50px;
-  width: 120px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
-.sidebar .nav-item {
-margin-bottom: 1rem;
-}
-
-.sidebar .university {
-margin-top: 1rem;
-/* margin-left: 1rem; */
-}
-
-#sidebar.open {
-right: 0; /* Slide the sidebar into view */
-}
-
-#closeSidebar {
-background: none;
-border: none;
-font-size: 1.5rem;
-cursor: pointer;
-float: right;
-}
 
 /* .sidebar .sidebar-content .university a{ text-decoration: none; color: white; }
 .sidebar .sidebar-content .university a{ background-color: #4cc1ec; border-radius: 10px; } */
+
+/* Navbar Styling */
+nav {
+  background-color: black; /* Initial black background */
+  padding: 5px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, 
+              box-shadow 0.3s ease;
+}
+
+/* Sticky Navbar Styling */
+nav.sticky {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  box-shadow: rgba(50, 50, 93, 0.1) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.1) 0px 1px 3px -1px; /* Softer shadow */
+}
+
+/* Logo Styling */
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  height: 70px;
+  width: auto;
+  margin-right: 10px;
+}
+
+nav .logo h1 {
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navigation Styling */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: auto;
+  gap: 32px;
+  line-height: 24px;
+  flex-wrap: nowrap; /* Ensures the items stay in a row */
+}
+
+nav ul li {
+  position: relative;
+}
+
+/* Drop-Down-SERVICES */
+.dropdown {
+  display: none; /* Hide dropdown by default */
+  position: absolute;
+  top: 100%; /* Position it below the parent li */
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px;
+  z-index: 10; /* Ensure it appears above other content */
+  padding: 10px 0;
+  min-width: 200px; /* Set a minimum width for the dropdown */
+}
+
+/* Dropdown Items Styling */
+.dropdown li {
+  margin: 0;
+}
+
+.dropdown li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 90%;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown li a:hover {
+  background-color: #333; /* Darker background on hover */
+}
+
+/* Show Dropdown on Hover */
+nav ul li:hover .dropdown {
+  display: block; /* Show the dropdown when hovering over the parent li */
+}
+/* Drop-Down-SERVICES */
+
+nav ul li a {
+  font-family: "Varela Round", sans-serif;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 95%;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 4px 4px;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 2px;
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(45deg, rgb(73, 231, 252),rgb(99, 20, 245));
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::before {
+  transform: scaleX(1);
+}
+
+/* Button Styling */
+nav .button1 {
+  color: white;
+  background-color: #2d7eff;
+  border: 5px solid transparent;
+  transition: 0.2s ease;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-size: 12px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 12px;
+  letter-spacing: 2px;
+  margin-left: auto; /* Keep button on the far right initially */
+}
+
+nav .button1:hover {
+  color: #2d7eff;
+  background-color: white;
+  transform: scale(1.1);
+  border: 5px solid #2d7eff;
+}
+
+/* Hamburger Styling */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 24px; /* Adjust height to accommodate the cross */
+  z-index: 3;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger .line:nth-child(1) {
+  top: 0;
+}
+
+.hamburger .line:nth-child(2) {
+  top: 10px;
+}
+
+.hamburger .line:nth-child(3) {
+  top: 20px;
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1100px) {
+  nav ul {
+    display: none; /* Hide the navigation links */
+  }
+
+  nav {
+    justify-content: flex-end; /* Align items to the right */
+  }
+
+  .button1 {
+    margin-right: 20px; /* Position button next to the hamburger */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger + .button1 {
+    order: 1; /* Place button to the left of the hamburger */
+  }
+}
+
+/* Menubar */
+
+.menubar {
+  position: fixed;
+  right: -100%; /* Start off-screen */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+  height: auto;
+  padding: 20% 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  backdrop-filter: blur(10px);
+  transition: all 0.5s ease-in;
+  z-index: 2;
+}
+
+.menubar.active {
+  right: 0; /* Slide in from the left */
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.menubar ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.menubar ul li {
+  margin-bottom: 32px;
+  position: relative; /* Needed for dropdown positioning */
+}
+
+/* Dropdown Menu Styling */
+.menubar ul li .dropdown {
+  display: none; /* Hide dropdown by default */
+  position: absolute;
+  top: 100%; /* Position it below the parent li */
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px;
+  z-index: 10; /* Ensure it appears above other content */
+  padding: 10px 0;
+  min-width: 200px; /* Set a minimum width for the dropdown */
+}
+
+/* Show Dropdown on Hover */
+.menubar ul li:hover .dropdown {
+  display: block; /* Show the dropdown when hovering over the parent li */
+}
+
+/* Dropdown Items Styling */
+.menubar .dropdown li {
+  margin: 0;
+}
+
+.menubar .dropdown li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 90%;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menubar .dropdown li a:hover {
+  background-color: #333; /* Darker background on hover */
+}
+
+/* Menubar Links Hover Animation */
+.menubar ul li a {
+  text-decoration: none;
+  font-family: "Varela Round", sans-serif;
+  color: #ffffff;
+  font-size: 95%;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block; /* Ensure the link wraps around the text */
+  position: relative; /* Needed for the hover animation */
+  letter-spacing: 2px;
+}
+
+.menubar ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Full width of the text */
+  height: 2px;
+  background: linear-gradient(45deg, rgb(73, 231, 252),rgb(99, 20, 245));
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+.menubar ul li a:hover::before {
+  transform: scaleX(1);
+}
+
+@media screen and (max-width: 790px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
 
 
 /* main page */
