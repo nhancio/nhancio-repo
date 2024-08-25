@@ -63,6 +63,8 @@ body { color: #508c9b; font-family: Arial, sans-serif; }
 .sidebar .nav-item { margin-bottom: 1rem; }
 .sidebar .university { margin-top: 1rem;}
 #sidebar.open { right: 0; }
+#Learn {background-color: rgba(128, 128, 128, 0.612);  text-decoration: none; color: black; height: 50px; width: 120px; margin-left: 0.5rem; display: flex;  justify-content: center; text-align: center; align-items: center; border-radius: 5px; font-weight: 400;font-size: 18px } 
+/* #Learn:hover { background-color: rgba(128, 128, 128, 0.612); } */
 
 
 /* Main page styling */
