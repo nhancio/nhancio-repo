@@ -23,6 +23,7 @@ body {
 .sidebar .sidebar-content .university a{ background-color: #4cc1ec; border-radius: 10px; } */
 
 /* Navbar Styling */
+
 nav {
   background-color: black; /* Initial black background */
   padding: 5px 5%;
@@ -43,8 +44,8 @@ nav.sticky {
   background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Blur effect */
   -webkit-backdrop-filter: blur(10px); /* For Safari */
-  box-shadow: rgba(50, 50, 93, 0.1) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.1) 0px 1px 3px -1px; /* Softer shadow */
+   box-shadow: rgba(50, 50, 93, 0.1) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.1) 0px 1px 3px -1px;  
 }
 
 /* Logo Styling */
@@ -253,7 +254,7 @@ nav .button1:hover {
   width: 60%;
   height: auto;
   padding: 20% 0;
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.6); /*Semi-transparent background8*/
   backdrop-filter: blur(10px);
   transition: all 0.5s ease-in;
   z-index: 2;
@@ -353,6 +354,178 @@ nav .button1:hover {
   }
 }
 
+@media screen and (max-width: 550px) {
+  nav ul {
+    gap: 24px; /* Reduce the gap between menu items */
+  }
+
+  nav .logo img {
+    height: 60px; /* Slightly reduce logo size */
+  }
+
+  nav .logo h1 {
+    font-size: 1rem; /* Adjust logo text size */
+  }
+
+  nav ul li a {
+    font-size: 90%; /* Slightly reduce menu link text size */
+    padding: 4px 4px; /* Adjust padding */
+  }
+
+  nav .button1 {
+    padding: 9px 9px; /* Slightly reduce button size */
+    font-size: 11px; /* Adjust button text size */
+  }
+
+  .hamburger {
+    width: 28px; /* Adjust hamburger size */
+    height: 22px; /* Adjust height for cross */
+  }
+}
+
+/* Responsive Adjustments for 450px width */
+@media screen and (max-width: 450px) {
+  nav ul {
+    gap: 16px; /* Reduce the gap between menu items */
+  }
+
+  nav .logo img {
+    height: 50px; /* Decrease logo size */
+  }
+
+  nav .logo h1 {
+    font-size: 0.9rem; /* Adjust logo text size */
+  }
+
+  nav ul li a {
+    font-size: 85%; /* Reduce menu link text size */
+    padding: 3px 3px; /* Adjust padding */
+  }
+
+  nav .button1 {
+    padding: 8px 8px; /* Reduce button size */
+    font-size: 11px; /* Adjust button text size */
+  }
+}
+
+/* Responsive Adjustments for 393px to 350px width */
+@media screen and (max-width: 393px) and (min-width: 350px) {
+  nav .button1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Ensure content stays in a row */
+    padding: 8px 8px;
+    font-size: 10px;
+  }
+
+  nav .button1 span {
+    display: inline; /* Ensure text remains inline */
+  }
+
+  /* Adjustments for menu items, logo, etc. if necessary */
+  nav ul {
+    gap: 12px; /* Adjust gap between menu items */
+  }
+
+  nav .logo img {
+    height: 40px; /* Adjust logo size */
+  }
+
+  nav .logo h1 {
+    font-size: 0.85rem; /* Adjust logo text size */
+  }
+
+  nav ul li a {
+    font-size: 80%;
+    padding: 2px 2px; /* Adjust padding for smaller screen */
+  }
+}
+
+
+/* Responsive Adjustments for 350px width */
+@media screen and (max-width: 350px) {
+  nav ul {
+    gap: 10px; /* Further reduce the gap between menu items */
+  }
+
+  nav .logo img {
+    height: 40px; /* Decrease logo size */
+  }
+
+  nav .logo h1 {
+    font-size: 0.8rem; /* Further adjust logo text size */
+  }
+
+  nav ul li a {
+    font-size: 75%; /* Reduce menu link text size more */
+    padding: 2px 2px; /* Adjust padding */
+  }
+
+  nav .button1 {
+    padding: 6px 6px; /* Reduce button size */
+    font-size: 10px; /* Adjust button text size */
+  }
+
+  .hamburger {
+    width: 25px; /* Reduce hamburger size */
+    height: 20px; /* Adjust height for cross */
+  }
+}
+
+/* Responsive Adjustments for 338px to 250px */
+@media screen and (max-width: 338px) and (min-width: 250px) {
+  /* Logo Adjustments */
+  nav .logo img {
+    height: 28px; /* Smaller logo size */
+  }
+
+  nav .logo h1 {
+    font-size: 0.7rem; /* Smaller logo text */
+  }
+
+  /* Menu Items Adjustments */
+  nav ul {
+    gap: 6px; /* Reduce gap between menu items */
+  }
+
+  nav ul li a {
+    font-size: 65%; /* Smaller menu link text */
+    padding: 1px 2px; /* Smaller padding */
+  }
+
+  /* Button ("Contact Us") Adjustments */
+  nav .button1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Ensure row layout */
+    padding: 3px 4px; /* Smaller button padding */
+    font-size: 7px; /* Smaller button text */
+    letter-spacing: 0.8px; /* Smaller letter spacing */
+  }
+
+  /* Hamburger Menu Adjustments */
+  .hamburger {
+    width: 18px; /* Further reduce hamburger size */
+    height: 13px; /* Smaller height */
+  }
+
+  .hamburger .line {
+    height: 1.5px; /* Thinner hamburger lines */
+  }
+
+  /* Dropdown or Menubar Adjustments if necessary */
+  .menubar ul li a {
+    font-size: 60%; /* Reduce dropdown menu font size */
+    padding: 5px 8px; /* Adjust padding for dropdown items */
+  }
+
+  /* Adjust the general spacing to ensure the layout doesn't overflow */
+  nav {
+    padding: 5px 4%; /* Reduce navbar padding slightly */
+  }
+}
 
 /* main page */
 .mainpage {
