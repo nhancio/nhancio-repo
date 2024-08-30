@@ -23,6 +23,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="script.js">
   </head>
   <body id="Home">
     <!-- Video Background -->
@@ -876,6 +877,78 @@
           navbar.classList.remove("scrolled");
         }
       };
+       //For href link
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      // Prevent the default action
+      e.preventDefault();
+    
+      // Get the target section from the href attribute
+      const targetId = this.getAttribute('href').substring(1);
+    
+      // Scroll to the target section
+      document.getElementById(targetId).scrollIntoView({
+          behavior:"smooth"
+      });
+    });
+    });
+    document.querySelectorAll('nav  a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      // Prevent the default action
+      e.preventDefault();
+    
+      // Get the target section from the href attribute
+      const targetId = this.getAttribute('href').substring(1);
+    
+      // Scroll to the target section
+      document.getElementById(targetId).scrollIntoView({
+          behavior:"smooth"
+      });
+    });
+    });
+    
+    document.querySelectorAll('.sidebar ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      // Prevent the default action
+      e.preventDefault();
+    
+      // Get the target section from the href attribute
+      const targetId = this.getAttribute('href').substring(1);
+    
+      // Scroll to the target section
+      document.getElementById(targetId).scrollIntoView({
+          behavior:"smooth"
+      });
+    });
+    });
+    document.querySelectorAll('.footer ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      // Prevent the default action
+      e.preventDefault();
+    
+      // Get the target section from the href attribute
+      const targetId = this.getAttribute('href').substring(1);
+    
+      // Scroll to the target section
+      document.getElementById(targetId).scrollIntoView({
+          behavior:"smooth"
+      });
+    });
+    });
+    document.querySelectorAll('#copy-right a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      // Prevent the default action
+      e.preventDefault();
+    
+      // Get the target section from the href attribute
+      const targetId = this.getAttribute('href').substring(1);
+    
+      // Scroll to the target section
+      document.getElementById(targetId).scrollIntoView({
+          behavior:"smooth"
+      });
+    });
+    });
 
       // Attach scroll event listener
       window.addEventListener("scroll", handleScroll);
