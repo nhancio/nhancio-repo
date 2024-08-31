@@ -454,6 +454,7 @@ h2 {
 .service-box img {
   max-width: 80px;
   margin-bottom: 20px;
+  height: auto;
 }
 
 /* Text Content in Service Box */
@@ -670,7 +671,7 @@ p {
 }
 .column img {
   width: 7.5rem;
-  height: 7.5rem;
+  height: auto;
   margin-bottom: 20px;
 }
 .column h3 {
@@ -967,7 +968,7 @@ p {
   }
   .column img {
     width: 6rem;
-    height: 6rem;
+    height: auto;
   }
 
   .hideOnMoblie {
@@ -1168,11 +1169,42 @@ p {
     margin-left: 20px;
   }
 }
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+  }
+
+  .nav {
+      display: none;
+  }
+
+  .mobile-nav {
+      display: block;
+  }
+}
 @media (max-width: 576px) {
   .navbar-brand img {
     height: 100px;
   }
 
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 1 1 300px; /* Grows to fill available space but is at least 300px wide */
+    margin: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+body {
+  font-size: 1rem; /* 16px by default, adjusts with screen size */
+}
   .main-section .we h1 {
     font-size: 2.5rem;
     line-height: 3rem;
@@ -1250,7 +1282,7 @@ p {
   }
   .column img {
     width: 4rem;
-    height: 4rem;
+    height: auto;
   }
   .column h3 {
     font-size: 16px;
