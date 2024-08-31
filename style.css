@@ -140,7 +140,7 @@ nav:hover .navbar-nav .nav-item .nav-link:hover {
 }
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
-  color: white;
+  color: #000;
 }
 
 /* University Button */
@@ -249,7 +249,7 @@ nav:hover .navbar-nav .nav-item .nav-link:hover {
 
 .sidebar ul li a {
   color: #000;
-  background-color: #fff;
+  /* background-color: #fff; */
   display: flex;
   height: 50px;
   width: 120px;
