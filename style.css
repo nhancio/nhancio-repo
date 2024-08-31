@@ -136,10 +136,14 @@ nav:hover .navbar-nav .nav-item .nav-link:hover {
 }
 
 .navbar-nav .nav-item:hover .nav-link {
-  color: black; /* Optional: Highlight color on hover */
+  color: #fff; /* Optional: Highlight color on hover */
 }
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
+  color: white;
+}
+.sidebar .nav-link.active,
+.sidebar .nav-link.show{
   color: #000;
 }
 
@@ -162,7 +166,7 @@ nav:hover .navbar-nav .nav-item .nav-link:hover {
   height: 50px;
   width: 120px;
   display: flex;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
   justify-content: center;
   align-items: center;
   border-radius: 5px;
@@ -253,7 +257,7 @@ nav:hover .navbar-nav .nav-item .nav-link:hover {
   display: flex;
   height: 50px;
   width: 120px;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
   justify-content: center;
   align-items: center;
   padding: 0 1rem;
