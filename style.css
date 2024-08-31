@@ -497,11 +497,15 @@ p {
   /* display: flex;
   margin-top: 4rem; */
   max-width: 1400px;
+
 }
 .projects-section {
   /* margin-top: 15rem; */
   /* padding-top: 6rem; */
   padding: 50px 20px;
+    padding: 50px 0; /* Adds padding to the top and bottom */
+    text-align: center; /* Centers text and inline elements */
+    background-color: #f9f9f9; /* Optional: background color for better visibility */
   text-align: center;
   background: linear-gradient(90deg, #ffbe25, #ff03cf);
   padding-bottom: 7rem;
