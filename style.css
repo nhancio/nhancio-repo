@@ -454,7 +454,6 @@ h2 {
 .service-box img {
   max-width: 80px;
   margin-bottom: 20px;
-  height: auto;
 }
 
 /* Text Content in Service Box */
@@ -497,15 +496,11 @@ p {
   /* display: flex;
   margin-top: 4rem; */
   max-width: 1400px;
-
 }
 .projects-section {
   /* margin-top: 15rem; */
   /* padding-top: 6rem; */
   padding: 50px 20px;
-    padding: 50px 0; /* Adds padding to the top and bottom */
-    text-align: center; /* Centers text and inline elements */
-    background-color: #f9f9f9; /* Optional: background color for better visibility */
   text-align: center;
   background: linear-gradient(90deg, #ffbe25, #ff03cf);
   padding-bottom: 7rem;
@@ -554,6 +549,22 @@ p {
   /* margin: 1rem auto; */
   height: 60px;
   font-weight: 400;
+}
+
+@media  screen and (max-width:768px) {
+  .projects-header h1 {
+    /* margin-top: 2rem; */
+    font-size: 2rem;
+    font-weight: 600;
+    /* text-align: center; */
+    color: #fff;
+    /* line-height: 36px; */
+  }
+  img{
+    padding-top: 1rem;
+    /* display: flex; */
+    /* justify-content: center; */
+  }
 }
 
 /* Responsive Adjustments */
@@ -675,7 +686,7 @@ p {
 }
 .column img {
   width: 7.5rem;
-  height: auto;
+  height: 7.5rem;
   margin-bottom: 20px;
 }
 .column h3 {
@@ -972,7 +983,7 @@ p {
   }
   .column img {
     width: 6rem;
-    height: auto;
+    height: 6rem;
   }
 
   .hideOnMoblie {
@@ -1140,8 +1151,14 @@ p {
     font-size: 14px;
   }
   .projects-section {
-    padding-bottom: 4rem;
+   
+          /* padding-bottom: 4rem; */
+          margin-bottom: 5rem;
+          /* padding-top: 5rem; */
+          height: 42rem;
+      
   }
+  
 
   .features {
     grid-template-columns: repeat(
@@ -1173,42 +1190,11 @@ p {
     margin-left: 20px;
   }
 }
-@media (max-width: 768px) {
-  .header {
-      flex-direction: column;
-  }
-
-  .nav {
-      display: none;
-  }
-
-  .mobile-nav {
-      display: block;
-  }
-}
 @media (max-width: 576px) {
   .navbar-brand img {
     height: 100px;
   }
 
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.item {
-    flex: 1 1 300px; /* Grows to fill available space but is at least 300px wide */
-    margin: 10px;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-body {
-  font-size: 1rem; /* 16px by default, adjusts with screen size */
-}
   .main-section .we h1 {
     font-size: 2.5rem;
     line-height: 3rem;
@@ -1286,7 +1272,7 @@ body {
   }
   .column img {
     width: 4rem;
-    height: auto;
+    height: 4rem;
   }
   .column h3 {
     font-size: 16px;
