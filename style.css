@@ -26,8 +26,8 @@ body {
 }
 
 .navbar:hover {
-  background-color: #fff;
-  color: #000;
+  /* background-color: #fff; */
+  color: #fff;
   cursor: context-menu;
 }
 nav .navbar-toggler {
@@ -42,24 +42,24 @@ nav :hover .navbar-toggler {
 }
 
 nav:hover .brand-nhan {
-  color: #000;
+  color: #fff;
 }
 .navbar:hover #learn {
-  color: #fff;
-  background-color: #000;
+  color: #000;
+  background-color: #fff;
   border: 2px solid black;
 }
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
-  color: #000;
-}
-nav :hover .navbar-nav .nav-item .nav-link {
-  color: #000;
-}
-nav:hover .navbar-nav .nav-item .nav-link:hover {
   color: #fff;
-  background-color: #000;
+}
+.navbar:hover .nav-link {
+  color: #fff;
+}
+.navbar:hover .nav-item .nav-link:hover {
+  color: #000;
+  background-color: #fff;
   border: 2px solid #000;
 }
 
@@ -188,7 +188,7 @@ nav:hover .navbar-nav .nav-item .nav-link:hover {
 .navbar.scrolled .navbar-brand {
   color: #000;
 }
-.navbar.scrolled .nav-link:hover {
+.navbar.scrolled  .nav-item .nav-link:hover {
   background-color: rgba(0, 0, 0, 0.853);
   color: white;
 }
@@ -396,11 +396,16 @@ hr {
   border-radius: 20px;
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
   -webkit-backdrop-filter: blur(24px);
   backdrop-filter: blur(24px);
   height: 100%; /* Ensures boxes stretch to fill their container */
   min-height: 300px; /* Sets a minimum height */
   box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+}
+.feature-box:hover{
+  border: 1px  solid rgba(255, 255, 255, 0.08);
+  /* transform: matrix(5); */
 }
 
 .feature-box h3 {
@@ -438,6 +443,7 @@ h2 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+  padding-bottom: 5rem;
 }
 
 /* Service Box Styling */
@@ -496,11 +502,13 @@ p {
   /* display: flex;
   margin-top: 4rem; */
   max-width: 1400px;
+  
 }
 .projects-section {
   /* margin-top: 15rem; */
   /* padding-top: 6rem; */
   padding: 50px 20px;
+  cursor: not-allowed;
   text-align: center;
   background: linear-gradient(90deg, #ffbe25, #ff03cf);
   padding-bottom: 7rem;
@@ -551,6 +559,36 @@ p {
   font-weight: 400;
 }
 
+.project-item  {
+  display: flex;
+  align-items: baseline;
+ 
+  /* align-items:center; */
+  justify-content: space-around;
+  /* animation: slideline 3s timing-function 0s infinite alternate fill-mode; */
+  animation: 5s infinite linear slideline;
+  /* padding-left: 5rem; */
+  animation-iteration-count: infinite;
+  animation-delay: 250ms;
+  /* animation-direction: alternate-reverse; */
+  animation-fill-mode: forwards;
+  
+}
+
+@keyframes slideline {
+  0%{
+    margin-left: -20%;
+    /* gap:2rem; */
+  }
+  50%{
+    margin-left: 50%;
+    /* gap: 2rem; */
+  }
+  100%{
+    margin-left: 120%;
+    /* gap:2rem; */
+  }
+}
 @media  screen and (max-width:768px) {
   .projects-header h1 {
     /* margin-top: 2rem; */
