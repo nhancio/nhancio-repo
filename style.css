@@ -585,8 +585,8 @@ p {
     color: #fff;
     /* line-height: 36px; */
   }
-  img{
-/*     padding-top: 1rem; */
+.project-item img{
+    padding-top: 1rem;
     /* display: flex; */
     /* justify-content: center; */
   }
@@ -608,8 +608,8 @@ p {
     color: #fff;
     /* line-height: 36px; */
   }
-  img{
-/*     padding-top: 1rem; */
+.project-item img{
+    padding-top: 1rem;
     /* display: flex; */
     /* justify-content: center; */
   }
